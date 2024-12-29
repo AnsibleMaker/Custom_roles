@@ -1,0 +1,18 @@
+---
+- name: copying the script on endpoint
+  var_files:
+    - vars/main.yml
+
+  tasks:
+    - name: starting the copying on endpoint
+      win_copy:
+        src: ../files/main.ps1
+        dest: C:/Users/Administrator/Desktop/main.ps1
+        state: present
+        run_once: true
+      register: success
+
+    - name: checking the status of the copied file
+      debug:
+        msg: "File copied into endpoint"
+      when: success is defined
