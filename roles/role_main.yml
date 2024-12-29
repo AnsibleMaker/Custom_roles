@@ -1,0 +1,6 @@
+---
+- name: playbook for roles
+  hosts: all
+
+  roles:
+    - copy_and_execute
