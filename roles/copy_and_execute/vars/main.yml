@@ -1,7 +1,6 @@
 ---
-# vars/main.yml
-cidr: "10.1.0.0/24"
-loc: "us-east-1"
-subnet:
-  public: "10.1.0.0/25"
-  private: "10.1.0.128/25"
+win:
+  - 'Microsoft Windows Server 2016 Datacenter'
+  - 'Microsoft Windows Server 2022 Datacenter'
+  - 'Microsoft Windows Server 2019 Datacenter'
+
